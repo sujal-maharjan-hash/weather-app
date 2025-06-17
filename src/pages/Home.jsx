@@ -61,7 +61,7 @@ const Home = () => {
     }, 500);
 
     return () => clearTimeout(timer);
-  }, [location]);
+  }, [location, mockWeatherData]); // ✅ Added mockWeatherData to dependencies
 
   const handleLocationChange = (e) => {
     setLocation(e.target.value);
